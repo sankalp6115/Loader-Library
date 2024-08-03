@@ -6,10 +6,6 @@
     <title>Loader</title>
 </head>
 <style>
-    :root{
-        --ease: ease-in-out;
-        --dur: 1.3s;
-    }
     body{
         background-color: black;
     }
@@ -30,21 +26,20 @@
         width: 200px;
         background-image: linear-gradient(90deg, #ff6d5a 0%, #ffdd6d 37%, #ffc55c 100%);
         transform-origin: center;
-
     }
     .o1{
-        clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 50% 30%, 0 0);
         animation: ani1 1.3s ease-in-out infinite forwards;
+        clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 50% 30%, 0 0);
     }
     .o2{
-        animation: ani2 1.3s ease-in-out infinite backwards calc(1.3s/2);
+        animation: ani2 1.3s ease-in-out infinite backwards 0.65s;
     }
     .o3{
         animation: ani1 1.3s ease-in-out infinite forwards;
     }
     .o4{
+        animation: ani2 1.3s ease-in-out infinite backwards 0.65s;
         clip-path: polygon(0% 100%, 50% 70%, 100% 100%, 100% 0, 0 0);
-        animation: ani2 1.3s ease-in-out infinite backwards calc(1.3s/2);
     }
     @keyframes ani1 {
         0%{
@@ -69,10 +64,10 @@
 </style>
 <body>
     <div class="box">
-        <div class="c1 piece"></div>
-        <div class="c2 piece"></div>
-        <div class="c3 piece"></div>
-        <div class="c4 piece"></div>
+        <div class="o1 piece"></div>
+        <div class="o2 piece"></div>
+        <div class="o3 piece"></div>
+        <div class="o4 piece"></div>
     </div>
 </body>
 </html>
